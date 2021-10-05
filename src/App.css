@@ -26,11 +26,12 @@
     font-weight: 600;
 }
 .tabRouter .active{
-    border-bottom: 3px solid #13C2C2;
+    border-bottom: 2px solid #13C2C2;
 }
 
 .tab-router-icon {
   height: 30px;
+  filter: invert(76%) sepia(28%) saturate(6750%) hue-rotate(132deg) brightness(94%) contrast(85%);
 
 }
 .tab-router-header {
