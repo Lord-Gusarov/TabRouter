@@ -1,7 +1,9 @@
 .tabRouter a {
   color: black;
+  padding-bottom: 3px;
+  margin-right: 16px;
 }
-.tabRouter a:hover {
+.tabRouter a:hover, .tabRouter .active {
     font-weight: bold;
     border-bottom: 3px solid #13C2C2;
 }
