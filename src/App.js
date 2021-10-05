@@ -8,7 +8,6 @@ import './App.css'
 
 export default function App() {
   return (
-    <Router basename="dashboard">
       <div >
         <div
           style={{
@@ -23,6 +22,5 @@ export default function App() {
           <SideNav />
         </div>
       </div>
-    </Router>
   );
 }
