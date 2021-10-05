@@ -1,27 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Switch, Route, useRouteMatch } from "react-router-dom";
 
 const TabRouter = (props) => {
   const { icon, title, feat, tabs, extraComponent } = props;
   let match = useRouteMatch();
+  const [ activeTabId, setActiveTabId ] = useState(0)
+  function tabClasses(id) {
+      if (id === activeTabId) {
+          return "active"
+      }else {
+          return ""
+      }
+  }
 
   return (
-    <div className="tabRouter" style={{ width: "100%", display: "flex", flexDirection: "column" }}>
+    <div className="tabRouter" style={{ height: "99px", width: "100%", display: "flex", flexDirection: "column" }}>
       <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ display: "flex", flexDirection: "row" }}>
-            <h3>{icon}</h3>
-            <h1>{title}</h1>
-            <h4>{feat}</h4>
+            <div>{icon}</div>
+            <div>{title}</div>
+            <div className="feat">{feat}</div>
           </div>
           <div>
-              {tabs.map((tab, i) => {
+              {tabs.map((tab, id) => {
                 return (
-                    <>
-                        <Link style={{textDecoration: "none"}} to={`${match.url}${tab.to}`}>
-                                {tab.title}
+                        <Link 
+                            to={`${match.url}${tab.to}`}
+                            onClick={() => setActiveTabId(id)}
+                            className={tabClasses(id)}
+                            key={tab.title}
+                        >
+                            {tab.title}
                         </Link>
-                    </>
                 );
               })}
 
@@ -34,7 +45,7 @@ const TabRouter = (props) => {
 
       <Switch>
         {tabs.map((tab) => {
-          return <Route path={`${match.url}${tab.to}`}>{tab.component}</Route>;
+          return <Route path={`${match.url}${tab.to}`} key={tab.to}>{tab.component}</Route>;
         })}
       </Switch>
     </div>

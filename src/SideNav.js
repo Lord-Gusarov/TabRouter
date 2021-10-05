@@ -1,12 +1,9 @@
 import React from "react";
 import {
-  HashRouter as Router,
   Switch,
   Route,
   Link,
-  useRouteMatch,
   Redirect,
-  useParams
 } from "react-router-dom";
 import Leadership from "./Tabs/Leadership";
 import Teamwork from "./Tabs/Teamwork";
@@ -15,7 +12,7 @@ import Teamwork from "./Tabs/Teamwork";
 export default function SideNav() {
   return (
       <div style={{display: "flex"}}>
-        <nav className="navcontainer" style={{height: "100vh", width: "279px", borderRight: "2px solid red"}}>
+        <nav className="navcontainer" style={{height: "100vh", width: "279px", borderRight: "2px solid red", backgroundColor: "lightgray"}}>
           <ul>
             <li>
               <Link to="/feed">Feed</Link>

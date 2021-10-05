@@ -1,14 +1,8 @@
 import React from "react";
 import {
   HashRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
 } from "react-router-dom";
-import Leadership from "./Tabs/Leadership";
-import Teamwork from "./Tabs/Teamwork";
+
 import SideNav from "./SideNav";
 import './App.css'
 
