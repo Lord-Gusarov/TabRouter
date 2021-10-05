@@ -21,13 +21,13 @@ export default function Teamwork () {
     ]
 
     return (
-        <div>
+        <div style={{width: "100%"}}>
             <TabRouter
             icon="path/to/icon"
             title="Teamwork"
             feat="BETA"
             tabs={tabs}
-            extraComponent="Extra"
+            extraComponent="ExtraComp"
             />
         </div>
     )

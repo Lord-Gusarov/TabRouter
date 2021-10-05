@@ -25,7 +25,7 @@ export default function App() {
         >
           <div style={{justifyItems: "center"}}>Header</div>
         </div>
-        <div style={{ float: "left" }}>
+        <div style={{}}>
           <SideNav />
         </div>
       </div>
