@@ -5,22 +5,15 @@ const TabRouter = (props) => {
   const { icon, title, feat, tabs, extraComponent } = props;
   let match = useRouteMatch();
   const [ activeTabId, setActiveTabId ] = useState(0)
-  function tabClasses(id) {
-      if (id === activeTabId) {
-          return "active"
-      }else {
-          return ""
-      }
-  }
+  
 
   return (
     <div className="tabRouter" style={{ height: "99px", width: "100%", display: "flex", flexDirection: "column" }}>
       <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ display: "flex", flexDirection: "row" }}>
-            <div>{icon}</div>
-            <div>{title}</div>
-            <div className="feat">{feat}</div>
+          <div style={{ display: "flex", flexDirection: "row", alignItems: "center"}}>
+            <img className="tab-router-icon" src={icon} alt="Icon" />
+            <div className="tab-router-header">{title}<span className="feat"> {feat}</span></div>
           </div>
           <div>
               {tabs.map((tab, id) => {
@@ -28,7 +21,7 @@ const TabRouter = (props) => {
                         <Link 
                             to={`${match.url}${tab.to}`}
                             onClick={() => setActiveTabId(id)}
-                            className={tabClasses(id)}
+                            className={(id === activeTabId) ? "active": ""}
                             key={tab.title}
                         >
                             {tab.title}
@@ -42,7 +35,7 @@ const TabRouter = (props) => {
           <h2>{extraComponent}</h2>
         </div>
       </div>
-
+      <hr/>
       <Switch>
         {tabs.map((tab) => {
           return <Route path={`${match.url}${tab.to}`} key={tab.to}>{tab.component}</Route>;

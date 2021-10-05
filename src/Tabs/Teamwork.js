@@ -23,7 +23,7 @@ export default function Teamwork () {
     return (
         <div style={{width: "100%"}}>
             <TabRouter
-            icon="path/to/icon"
+            icon="static/icons/icon-feedcategory-team.svg"
             title="Teamwork"
             feat="BETA"
             tabs={tabs}

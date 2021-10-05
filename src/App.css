@@ -3,16 +3,60 @@
   color: black;
   padding-bottom: 3px;
   margin-right: 16px;
+  position: static;
+  height: 24px;
+  left: 0px;
+  right: 0px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 24px;
+  /* identical to box height, or 185% */
+
+  align-items: center;
+  text-align: center;
+
+  /* Primary / Stone Black */
+
+  color: #222222;
+
 }
 .tabRouter a:hover, .tabRouter .active {
-    font-weight: bold;
+    font-weight: 600;
 }
 .tabRouter .active{
     border-bottom: 3px solid #13C2C2;
 }
 
-.feat {
-  color: #FF85C0;
+.tab-router-icon {
+  height: 30px;
+
+}
+.tab-router-header {
+  position: static;
+  height: 36px;
+  left: 38px;
+  top: 0px;
+
+  /* Web/Header 1 Semibold */
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height, or 150% */
+
+
+  /* Primary / Stone Black */
+
+  color: #222222;
+
+}
+.tabRouter .feat {
+  color: #eb2e96;
+  font-size: 16px;
   font-weight: bold;
 }
 
