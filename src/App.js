@@ -10,6 +10,7 @@ import {
 import Leadership from "./Tabs/Leadership";
 import Teamwork from "./Tabs/Teamwork";
 import SideNav from "./SideNav";
+import './App.css'
 
 export default function App() {
   return (

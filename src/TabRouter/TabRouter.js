@@ -6,8 +6,8 @@ const TabRouter = (props) => {
   let match = useRouteMatch();
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <div style={{ display: "flex", flexDirection: "row" }}>
+    <div className="tabRouter" style={{ width: "100%", display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ display: "flex", flexDirection: "row" }}>
             <h3>{icon}</h3>
@@ -18,7 +18,9 @@ const TabRouter = (props) => {
               {tabs.map((tab, i) => {
                 return (
                     <>
-                        <Link to={`${match.url}${tab.to}`}>{tab.title}</Link>
+                        <Link style={{textDecoration: "none"}} to={`${match.url}${tab.to}`}>
+                                {tab.title}
+                        </Link>
                     </>
                 );
               })}
