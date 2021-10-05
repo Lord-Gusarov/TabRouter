@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Switch, Route, useRouteMatch } from "react-router-dom";
+import { Link, Switch, Route, useRouteMatch, Redirect} from "react-router-dom";
 
 const TabRouter = (props) => {
   const { icon, title, feat, tabs, extraComponent } = props;
@@ -47,6 +47,9 @@ const TabRouter = (props) => {
         {tabs.map((tab) => {
           return <Route path={`${match.url}${tab.to}`} key={tab.to}>{tab.component}</Route>;
         })}
+        <Route path={match.url}>
+            <Redirect to={`${match.url}${tabs[0].to}`} />
+        </Route>
       </Switch>
     </div>
   );
