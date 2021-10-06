@@ -25,6 +25,7 @@ export default function Teamwork () {
             <TabRouter
             Icon={TeamIcon}
             title="Teamwork"
+            feat="BETA"
             tabs={tabs}
             extraComponent={<h5>ExtraComp</h5>}
             />
