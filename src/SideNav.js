@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Leadership from "./Tabs/Leadership";
 import Teamwork from "./Tabs/Teamwork";
-
+import Wellbeing from "./Tabs/Wellbeing"
 
 export default function SideNav() {
   return (
@@ -51,7 +51,7 @@ export default function SideNav() {
             <Teamwork />
           </Route>
           <Route path="/wellbeing">
-            <h1>Wellbeing</h1>
+            <Wellbeing />
           </Route>
           <Route path="/digital">
             <h1>Digital EQ</h1>

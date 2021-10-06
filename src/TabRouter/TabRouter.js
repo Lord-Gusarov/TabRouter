@@ -31,7 +31,7 @@ const TabRouter = (props) => {
           </div>
         </div>
         <div>
-          <h2>{extraComponent}</h2>
+          {extraComponent}
         </div>
       </div>
       <hr/>

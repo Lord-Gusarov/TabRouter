@@ -1,32 +1,31 @@
 import React from 'react'
-import { useRouteMatch, Link, Switch, Route } from 'react-router-dom';
+import TabRouter from '../TabRouter/TabRouter'
 
+import { LeadershipIcon } from '../FeedCategoryIcons';
 export default function Leadership () {
-    let match = useRouteMatch()
+    const tabs = [
+        {
+            title: "Behaviors",
+            to: "/behaviors",
+            component: (<h2>TR behaviors</h2>)
+        },
+        {
+            title: "Opportunities",
+            to: "/opportunities",
+            component: (<h2>TR Opportunities</h2>)
+        },
+        {
+            title: "Relationships",
+            to: "/relationships",
+            component: (<h2>TR Relationships</h2>)
+        }
+    ]
   return (
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to={`${match.url}/behaviours`}>Behaviors</Link>
-            </li>
-            <li>
-              <Link to={`${match.url}/opportunities`}>Opportunities</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path={`${match.url}/behaviours`}>
-           <h1>Behaviors</h1>
-          </Route>
-          <Route path={`${match.url}/opportunities`}>
-            <h1>Opportunities</h1>
-          </Route>
-          <Route path={match.url}>
-            <h1>Leadership home</h1>
-          </Route>
-        </Switch>
-      </div>
+      <TabRouter
+        Icon={LeadershipIcon}
+        title="Leadership"
+        tabs={tabs}
+        extraComponent={(<h3>Extra Leadership</h3>)}
+        />
   );
 }
