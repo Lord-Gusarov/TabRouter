@@ -4,7 +4,7 @@ import { routerMiddleware } from 'connected-react-router'
 import createRootReducer from './reducers'
 
 export const history = createHashHistory({
-    hashType: 'slash',
+    basename: '/dashboard',
     getUserConfirmation: (message, callback) => callback(window.confirm(message))
 });
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import TabRouter from '../TabRouter/TabRouter'
+import { TeamIcon } from '../FeedCategoryIcons'
 
 export default function Teamwork () {
     const tabs = [
@@ -23,7 +24,7 @@ export default function Teamwork () {
     return (
         <div style={{width: "100%"}}>
             <TabRouter
-            icon="static/icons/icon-feedcategory-team.svg"
+            Icon={TeamIcon}
             title="Teamwork"
             feat="BETA"
             tabs={tabs}

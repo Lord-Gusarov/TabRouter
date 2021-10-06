@@ -1,8 +1,9 @@
 import React from "react";
+/*
 import {
   HashRouter as Router,
 } from "react-router-dom";
-
+*/
 import SideNav from "./SideNav";
 import './App.css'
 

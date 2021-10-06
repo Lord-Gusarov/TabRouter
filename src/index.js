@@ -13,7 +13,7 @@ const store = configureStore()
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store} >
-      <ConnectedRouter history={history} >
+      <ConnectedRouter  history={history} >
         <App />
       </ConnectedRouter>
     </Provider>
